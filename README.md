@@ -6,7 +6,7 @@ Note that a lot of these are provided by Git, but are wrapped in bash functions 
 
 ---
 
-- is_git
+#### is_git
 
 Check if current directory is in a git repository.
 
@@ -27,14 +27,14 @@ echo $?
 0
 ```
 
-- number_of_commits
+#### number_of_commits
 
 ```
 number_of_commits
 118
 ```
 
-- top_commits_by_author
+#### top_commits_by_author
 
 ```
 top_commits_by_author
@@ -44,14 +44,14 @@ top_commits_by_author
 10  <other people, contrived example lololol>
 ```
 
-- minutes_since_last_commit
+#### minutes_since_last_commit
 
 ```
 minutes_since_last_commit
 5
 ```
 
-- time_since_last_commit
+#### time_since_last_commit
 
 ```
 time_since_last_commit
@@ -60,7 +60,7 @@ about 16 hours
 
 *Note that this utilizes a helper from [action_view](https://rubygems.org/gems/actionview) so you'll want a functioning Ruby/Rails installation for this.*
 
-- last_commit_time
+#### last_commit_time
 
 ```
 last_commit_time
@@ -73,24 +73,24 @@ Issues/PRs welcome – this is a PoC mostly for things that I find handy, but ne
 
 ### License
 
-The MIT License (MIT)
+    The MIT License (MIT)
 
-Copyright (c) Kristian Freeman 2014
+    Copyright (c) Kristian Freeman 2014
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
 
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
+    The above copyright notice and this permission notice shall be included in
+    all copies or substantial portions of the Software.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-THE SOFTWARE.
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+    THE SOFTWARE.
