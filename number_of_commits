@@ -1,0 +1,8 @@
+is_git -s
+code=$?
+
+if [[ "$code" = 0 ]]; then
+  git rev-list HEAD --count
+else
+  echo "Cannot run outside of a git repository."
+fi

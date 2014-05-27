@@ -1,0 +1,46 @@
+_ig_usage() {
+cat << EOF
+usage: $0 options
+
+This function tests the current directory to see if it is in a git repository.
+Run this command with "-s" to return a status code or "-v" for verbose mode.
+
+OPTIONS:
+  -s    Returns "0" if in a git repo, or "128" if not.
+  -v    Verbose. Returns "TRUE" or "FALSE", as well as the status code (-s).
+
+EOF
+}
+
+  _ig_status=0
+  _ig_verbose=0
+
+  while getopts "sv" OPTION; do
+    case "${OPTION}" in
+      s) _ig_status=1 ;;
+      v) _ig_verbose=1 ;;
+      ?) _ig_usage
+         exit
+         ;;
+    esac
+  done
+
+_ig_repo() {
+  [ -d .git ] || git rev-parse --git-dir > /dev/null 2>&1
+}
+
+if [[ $_ig_status = 0 ]] && [[ $_ig_verbose = 0 ]]; then
+  _ig_usage
+  exit 1
+else
+  _ig_repo
+  code=$?
+  if [[ "$_ig_verbose" = 1 ]]; then
+    if [[ "$code" = 0 ]]; then
+      echo "TRUE"
+    else
+      echo "FALSE"
+    fi
+  fi
+  exit $code
+fi
