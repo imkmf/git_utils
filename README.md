@@ -51,6 +51,15 @@ minutes_since_last_commit
 5
 ```
 
+- time_since_last_commit
+
+```
+time_since_last_commit
+about 16 hours
+```
+
+*Note that this utilizes a helper from [action_view](https://rubygems.org/gems/actionview) so you'll want a functioning Ruby/Rails installation for this.*
+
 - last_commit_time
 
 ```

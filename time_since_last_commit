@@ -1,0 +1,13 @@
+#!/usr/bin/env ruby
+require 'time'
+require 'action_view'
+include ActionView::Helpers::DateHelper
+
+command = `last_commit_time`.chop.to_s
+date = Time.parse(command)
+
+# Showing up on my machine, may be irrelevant for most
+I18n.enforce_available_locales = false
+
+output = distance_of_time_in_words_to_now(date)
+puts output
