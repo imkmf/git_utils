@@ -1,12 +1,12 @@
 is_git -s
 code=$?
 
-function number_of_commits {
-  git rev-list HEAD --count
+function last_commit_time {
+  git log -1 --format="%cd"
 }
 
 if [[ "$code" = 0 ]]; then
-  number_of_commits
+  last_commit_time
 else
   echo "Cannot run outside of a git repository."
 fi

@@ -29,8 +29,6 @@ echo $?
 
 - number_of_commits
 
-Number of commits for a repository.
-
 ```
 number_of_commits
 118
@@ -38,14 +36,26 @@ number_of_commits
 
 - top_commits_by_author
 
-Top commits by author.
-
 ```
 top_commits_by_author
 
 115 Kristian Freeman
 30  <someone>
 10  <other people, contrived example lololol>
+```
+
+- minutes_since_last_commit
+
+```
+minutes_since_last_commit
+5
+```
+
+- last_commit_time
+
+```
+last_commit_time
+Tue May 27 10:54:46 2014 -0700
 ```
 
 ### Contributing

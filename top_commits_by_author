@@ -1,8 +1,12 @@
 is_git -s
 code=$?
 
-if [[ "$code" = 0 ]]; then
+function top_commits_by_author {
   git shortlog -s -n --all
+}
+
+if [[ "$code" = 0 ]]; then
+  top_commits_by_author
 else
   echo "Cannot run outside of a git repository."
 fi
