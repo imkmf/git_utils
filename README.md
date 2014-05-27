@@ -1,6 +1,6 @@
 # git_utils
 
-A nice collection of git utilities written in pure bash.
+A nice collection of git utilities written in simple Bash or sometimes Ruby.
 
 Note that a lot of these are provided by Git, but are wrapped in bash functions so you don't have to remember a bunch of optargs and things like that.
 
