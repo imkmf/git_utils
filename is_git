@@ -1,4 +1,4 @@
-_ig_usage() {
+function usage {
 cat << EOF
 usage: $0 options
 
@@ -12,30 +12,30 @@ OPTIONS:
 EOF
 }
 
-  _ig_status=0
-  _ig_verbose=0
+status=0
+verbose=0
 
-  while getopts "sv" OPTION; do
-    case "${OPTION}" in
-      s) _ig_status=1 ;;
-      v) _ig_verbose=1 ;;
-      ?) _ig_usage
-         exit
-         ;;
-    esac
-  done
+while getopts "sv" OPTION; do
+  case "${OPTION}" in
+    s) status=1 ;;
+    v) verbose=1 ;;
+    ?) usage
+       exit
+       ;;
+  esac
+done
 
-_ig_repo() {
+function repo {
   [ -d .git ] || git rev-parse --git-dir > /dev/null 2>&1
 }
 
-if [[ $_ig_status = 0 ]] && [[ $_ig_verbose = 0 ]]; then
-  _ig_usage
+if [[ $status = 0 ]] && [[ $verbose = 0 ]]; then
+  usage
   exit 1
 else
-  _ig_repo
+  repo
   code=$?
-  if [[ "$_ig_verbose" = 1 ]]; then
+  if [[ "$verbose" = 1 ]]; then
     if [[ "$code" = 0 ]]; then
       echo "TRUE"
     else
