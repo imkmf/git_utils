@@ -1,0 +1,8 @@
+REPO=$1
+
+if [-n "$REPO" ]; then
+  REPO=$(basename $(pwd))
+fi
+
+git init
+git add .; git commit -m "Initial commit for $REPO."

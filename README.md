@@ -67,6 +67,15 @@ last_commit_time
 Tue May 27 10:54:46 2014 -0700
 ```
 
+#### initialize_repo
+
+Initializes a repo with `git init` in the current directory, then adds all files and does a initial commit. Unless given an `$1` (single argument), the `$REPO` variable will be set to the current directory.
+
+```
+initialize_repo
+"Initial commit for $REPO"
+```
+
 ### Contributing
 
 Issues/PRs welcome – this is a PoC mostly for things that I find handy, but new things are obviously welcome.
